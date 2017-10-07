@@ -1,0 +1,29 @@
+.results_container {
+    width: cover;
+    margin: auto;
+    height: 500px;
+    background-color: #A6C9E9;
+    margin: 40px;
+    justify-content: center;
+}
+
+h2 {
+    text-align: center;  
+    padding-top: 20px;  
+}
+
+.results_flex {
+
+}
+
+table {
+    border: 3px solid white;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.table_header {
+    font-size: 28px;
+    text-align: left;
+}
+

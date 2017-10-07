@@ -1,0 +1,25 @@
+header {
+    height: 30px;
+    padding: 30px;
+    /* display: flex; */
+}
+
+.main_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    color: #333333;
+    font-size: 30px;
+    justify-content: flex-start;
+}
+
+.search {
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.submit {
+    
+}

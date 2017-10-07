@@ -1,0 +1,9 @@
+.App {
+  /* display: flex; */
+  background-image: url(mp.jpg);
+  height: 1000px;
+  width: 100%;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
