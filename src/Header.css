@@ -10,16 +10,46 @@ header {
 }
 
 h1 {
-    color: #333333;
-    font-size: 30px;
+    color:#E74F44;
+    font-size: 60px;
     justify-content: flex-start;
+    font-family: 'Lobster', cursive;
+    margin-top: 0px;
 }
 
 .search {
     justify-content: flex-end;
-    margin-top: 30px;
+    margin-top: 20px;
+}
+
+input {
+    width: 200px;
+    height: 30px;
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+}
+
+input::placeholder {
+    color: #E74F44;
 }
 
 .submit {
-    
+    height: 30px;
+    border-radius: 5px;
 }
+
+.submit:hover {
+    text-decoration: underline;
+    color: #409B40;
+}
+
+/* font-family: 'Indie Flower', cursive;
+font-family: 'Germania One', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Shadows Into Light', cursive; */

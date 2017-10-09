@@ -1,1 +1,2 @@
-const baseUrl = 'http://localhost:3000/api/country';
+const baseUrl = 'http://localhost:4000';
+export default baseUrl;

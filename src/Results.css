@@ -1,8 +1,8 @@
 .results_container {
+    background-size: cover;
     width: cover;
     margin: auto;
-    height: 500px;
-    background-color: #A6C9E9;
+    background: linear-gradient(left bottom, #7272EB, #23DF23, #E7EB28);
     margin: 40px;
     justify-content: center;
 }
@@ -13,17 +13,34 @@ h2 {
 }
 
 .results_flex {
-
+    margin-left: 30px;
+    padding-bottom: 30px;
+    /* justify-content: space-between; */
+    
 }
 
 table {
     border: 3px solid white;
     padding: 20px;
-    margin-left: 20px;
+    width: 30%;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 20px;
+    color: white
+    
 }
 
 .table_header {
     font-size: 28px;
     text-align: left;
+    color: white;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
+th td {
+    padding: 10px;
+}
+
+.props_font {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 20px;
+}

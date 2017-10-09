@@ -3,7 +3,7 @@ import './Results.css';
 
 
 export default function Results(props) {
-
+    console.log(props);
     return (
         <div className='results_container'>
             <div>
@@ -19,27 +19,27 @@ export default function Results(props) {
                             </tr>
                             <tr>
                                 <td>Country</td>
-                                <td>response.data[0].name</td>
+                                <td className='props_font'>{props.name}</td>
                             </tr>
                             <tr>
                                 <td>Region</td>
-                                <td>response.data[0].region</td>
+                                <td className='props_font'>{props.region}</td>
                             </tr>
                             <tr>
                                 <td>Sub-region</td>
-                                <td>response.data[0].subregion</td>
+                                <td className='props_font'>{props.subregion}</td>
                             </tr>
                             <tr>
                                 <td>Capital City</td>
-                                <td>response.data[0].capital</td>
+                                <td className='props_font'>{props.capital}</td>
                             </tr>
                             <tr>
                                 <td>Language</td>
-                                <td>response.data[0].languages</td>
+                                <td className='props_font'>{props.language}</td>
                             </tr>
                             <tr>
                                 <td>Currency</td>
-                                <td>response.data[0].currencies</td>
+                                <td className='props_font'>{props.currency}</td>
                             </tr>
                         </tbody>
                     </table>

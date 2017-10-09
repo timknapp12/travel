@@ -12,12 +12,7 @@ class App extends Component {
 
     this.state = {
       countryName: '',
-      // countryCode: '',
-      // region: '',
-      // capitalCity: '',
-      // language: '',
-      // currency: '',
-      results: {},
+      results: [],
       userInput: ''
     }
 
@@ -31,19 +26,34 @@ class App extends Component {
   }
 
   findResults() {
-    return axios.get(baseUrl).then(response => {
+    console.log("inside find results"); 
+    console.log(`${baseUrl}/country/${this.state.userInput}`);
+    return axios.get(`${baseUrl}/country/${this.state.userInput}`).then(response => {
+      console.log("indicator", response.data);
       this.setState({ results: response.data })
     })
   }
 
-  componentDidMount() {
+  componentWillMount() {
     return this.state.results;
   }
 
 
   render() {
-    console.log(this.state.results);
 
+    var newResults = this.state.results.map(i => {
+      return(
+        <Results
+        name={i.name}
+        region={i.region}
+        subregion={i.subregion}
+        capital={i.capital}
+        language={i.languages[0].name}
+        currency={i.currencies[0].name} />
+      )
+    })
+      
+     
 
     return (
       <section >
@@ -51,49 +61,22 @@ class App extends Component {
           <div className="App">
             <Header findResults={this.findResults}
               handleChange={this.handleChange} />
+            <div className="center_text">
+              <div>
+              <h2>Change Your World :</h2>
+              </div>
+              <div className='one_dest'>
+              <h3 className='h31'>one</h3>
+              <h3 className='h32' >destination</h3>
+              <h3 className='h33'>at a time</h3>
+              </div>
+            </div>
+
           </div>
 
           <div>
-            {/* <Text /> */}
+                {newResults}
           </div>
-
-        </div>
-
-        <div>
-        <table>
-                        <tbody>
-                          <Results
-                          countryName/>
-                            <tr>
-                                <th></th>
-                                <th className='table_header'>Destination</th>
-                            </tr>
-                            <tr>
-                                <td>Country</td>
-                                <td>countryName={this.state.response.data[0].name}</td>
-                            </tr>
-                            <tr>
-                                <td>Region</td>
-                                <td>region={this.state.results[0].region}</td>
-                            </tr>
-                            <tr>
-                                <td>Sub-region</td>
-                                <td>subregion={this.state.results[0].subregion}</td>
-                            </tr>
-                            <tr>
-                                <td>Capital City</td>
-                                <td>capital={this.state.results[0].capital}</td>
-                            </tr>
-                            <tr>
-                                <td>Language</td>
-                                <td>language={this.state.results[0].languages}</td>
-                            </tr>
-                            <tr>
-                                <td>Currency</td>
-                                <td>currency={this.state.results[0].currencies}</td>
-                            </tr>
-                        </tbody>
-                    </table> */}
         </div>
       </section>
     );
