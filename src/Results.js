@@ -7,7 +7,7 @@ export default function Results(props) {
     return (
         <div className='results_container'>
             <div>
-                <h2>My List of Countries</h2>
+            <a id="results_section"><h2>My List of Countries</h2></a>
             </div>
             <section className='results_flex'>
                 <div>

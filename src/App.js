@@ -26,12 +26,12 @@ class App extends Component {
   }
 
   findResults() {
-    console.log("inside find results"); 
     console.log(`${baseUrl}/country/${this.state.userInput}`);
     return axios.get(`${baseUrl}/country/${this.state.userInput}`).then(response => {
       console.log("indicator", response.data);
       this.setState({ results: response.data })
     })
+
   }
 
   componentWillMount() {

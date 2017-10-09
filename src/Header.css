@@ -34,7 +34,7 @@ input {
 }
 
 input::placeholder {
-    color: #E74F44;
+    color: white;
 }
 
 .submit {
@@ -47,9 +47,22 @@ input::placeholder {
     color: #409B40;
 }
 
+@media(max-width:1150px) {
+    input {
+        color: #E74F44;
+    }
+}
+
+@media(max-width:1150px) {
+    input::placeholder {
+        color: #E74F44;
+    }
+}
 /* font-family: 'Indie Flower', cursive;
 font-family: 'Germania One', cursive;
 font-family: 'Lobster', cursive;
 font-family: 'Pacifico', cursive;
 font-family: 'Gloria Hallelujah', cursive;
 font-family: 'Shadows Into Light', cursive; */
+
+/* color: #E74F44; */
