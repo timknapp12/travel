@@ -2,7 +2,7 @@
     background-size: cover;
     width: cover;
     margin: auto;
-    background: linear-gradient(left bottom, #7272EB, #23DF23, #E7EB28);
+    background: linear-gradient(left bottom, #0C4E2F, #23DF23, #E7EB28);
     margin: 40px;
     justify-content: center;
 }
@@ -22,10 +22,11 @@ h2 {
 table {
     border: 3px solid white;
     padding: 20px;
-    width: 30%;
+    width: 27%;
     font-family: 'Shadows Into Light', cursive;
     font-size: 20px;
-    color: white
+    color: white;
+    margin: 10px;
     
 }
 

@@ -4,6 +4,9 @@ import Header from './Header.js';
 import Results from './Results.js';
 import axios from 'axios';
 import baseUrl from './api.js';
+import { getCountryList, getCountry, updateCountry, deleteCountry } from './countries.js';
+import CountryLists from './countryLists';
+
 
 class App extends Component {
 
@@ -29,7 +32,8 @@ class App extends Component {
     console.log(`${baseUrl}/country/${this.state.userInput}`);
     return axios.get(`${baseUrl}/country/${this.state.userInput}`).then(response => {
       console.log("indicator", response.data);
-      this.setState({ results: response.data })
+      let newResults = [...this.state.results, response.data[0]]
+      this.setState({ results: newResults })
     })
 
   }
@@ -42,18 +46,18 @@ class App extends Component {
   render() {
 
     var newResults = this.state.results.map(i => {
-      return(
+      return (
         <Results
-        name={i.name}
-        region={i.region}
-        subregion={i.subregion}
-        capital={i.capital}
-        language={i.languages[0].name}
-        currency={i.currencies[0].name} />
+          name={i.name}
+          region={i.region}
+          subregion={i.subregion}
+          capital={i.capital}
+          language={i.languages[0].name}
+          currency={i.currencies[0].name} />
       )
     })
-      
-     
+
+
 
     return (
       <section >
@@ -63,19 +67,31 @@ class App extends Component {
               handleChange={this.handleChange} />
             <div className="center_text">
               <div>
-              <h2>Change Your World :</h2>
+                <h2>Change Your World :</h2>
               </div>
               <div className='one_dest'>
-              <h3 className='h31'>one</h3>
-              <h3 className='h32' >destination</h3>
-              <h3 className='h33'>at a time</h3>
+                <h3 className='h31'>one</h3>
+                <h3 className='h32' >destination</h3>
+                <h3 className='h33'>at a time</h3>
               </div>
+            </div>
+
+          </div>
+          <div>
+            <div className='results_container'>
+              <div>
+                <a id="results_section"><span><h2>My List of Countries</h2></span></a>
+              </div>
+              <section className='results_flex'>
+                  {newResults}
+
+              </section>
             </div>
 
           </div>
 
           <div>
-                {newResults}
+            {newResults}
           </div>
         </div>
       </section>

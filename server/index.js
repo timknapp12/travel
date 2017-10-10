@@ -12,6 +12,12 @@ const express = require('express'),
 app.use(bodyParser.json());
 app.use(cors());
 
+app.post('/api/country', ctrl.create);
+app.get('/api/country', ctrl.read);
+app.put('/api/country/:id', ctrl.update);
+app.delete('/api/country/:id', ctrl.delete);
+
+
 
 // app.get(baseUrl, ctrl.read);
 app.get('/country/:variable', function(req, res) {

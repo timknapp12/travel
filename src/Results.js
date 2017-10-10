@@ -5,12 +5,12 @@ import './Results.css';
 export default function Results(props) {
     console.log(props);
     return (
-        <div className='results_container'>
-            <div>
-            <a id="results_section"><h2>My List of Countries</h2></a>
-            </div>
-            <section className='results_flex'>
-                <div>
+        // <div className='results_container'>
+        //     <div>
+        //     <a id="results_section"><h2>My List of Countries</h2></a>
+        //     </div>
+        //     <section className='results_flex'>
+        //         <div>
                     <table>
                         <tbody>
                             <tr>
@@ -43,9 +43,12 @@ export default function Results(props) {
                             </tr>
                         </tbody>
                     </table>
-                </div>
-            </section>
-        </div>
+        //         </div>
+        //     </section>
+        //     <section>
+
+        //     </section>
+        // </div>
     );
 
 }
